@@ -1,0 +1,158 @@
+
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-family: 'Press Start 2P', monospace;
+  scroll-behavior: smooth;
+  /* background-color: black; */
+  background-color: #282828;
+}
+
+.bg-dark {
+  background-color: black !important;
+}
+
+.navbar-brand:hover{
+  scale: 0.9;
+  text-decoration: none;
+
+}
+
+/* HERO */
+.hero {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1 {
+  
+  color: #7fff58;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero p.lead {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  /* Esto elimina el subrayado */
+}
+
+.nav-link:hover {
+  text-decoration: none;
+  /* También asegura que no se subraye al pasar el ratón */
+  color: green;
+  scale: 0.9;
+}
+
+
+
+.btn-primary {
+  text-decoration: none;
+
+  background: #238636;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  text-decoration: none;
+
+  transform: scale(1.05) translateY(-3px);
+  background: #2ea043;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* PROYECTOS */
+.project-card {
+  background: #111;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* LINKS */
+a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1f6feb;
+  text-decoration: underline;
+}
+
+/* SECCIONES */
+
+.section {
+  color: white;
+  /* background-color: #282828; */
+  background-color: black;
+  /* opacity: 0.2; */
+  /* transform: scale(0.98); */
+  /* ligeramente más pequeña */
+  /* transition: opacity 0.8s ease, transform 0.8s ease; */
+}
+
+
+.bi {
+  font-size: xx-large;
+  padding: 0.2%;
+}
+
+.titulo {
+  padding: 2%;
+  border: 2px solid white;
+  border-bottom-right-radius: 2rem;
+}
+
+
+.titulo-animado {
+  display: inline-block;
+  animation: moverArribaAbajo 1.5s ease-in-out infinite;
+}
+
+@keyframes moverArribaAbajo {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+p{
+  font-size: large;
+}
+
+/* revelar al 20%*/
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
