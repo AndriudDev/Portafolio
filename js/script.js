@@ -39,7 +39,7 @@ function revealOnScroll() {
 
   reveals.forEach((el, index) => {
     const elementTop = el.getBoundingClientRect().top;
-    const triggerPoint = windowHeight * 0.8; // 20% desde abajo
+    const triggerPoint = windowHeight * 0.9; // 20% desde abajo
 
     if (elementTop < triggerPoint && !el.classList.contains('active')) {
       // Delay escalonado en milisegundos

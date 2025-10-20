@@ -1,4 +1,19 @@
-
+:root {
+  --primary: #3b4550;
+  --primary-dark: #0a3d66;
+  --primary-hover: #0d5ba8;
+  --primary-light: #09f;
+  --background: #06182a;
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --border: rgba(255, 255, 255, 0.1);
+  --card-bg: #1e293b;
+  --shadow: rgba(0, 0, 0, 0.3);
+  --input-bg: #1e293b;
+  --hsla-example: hsla(210, 100%, 56%, 1);
+  --verde: #7fff58;
+}
 
 body {
   font-family: 'Inter', sans-serif;
@@ -11,6 +26,8 @@ body {
 .bg-dark {
   background-color: black !important;
 }
+
+
 
 .navbar-brand:hover{
   scale: 0.9;
@@ -46,12 +63,13 @@ body {
 .nav-link {
   text-decoration: none;
   /* Esto elimina el subrayado */
+  color: white;
 }
 
 .nav-link:hover {
   text-decoration: none;
   /* También asegura que no se subraye al pasar el ratón */
-  color: green;
+  color: var(--verde);
   scale: 0.9;
 }
 
@@ -115,6 +133,8 @@ a:hover {
 }
 
 
+
+
 .bi {
   font-size: xx-large;
   padding: 0.2%;
@@ -122,9 +142,15 @@ a:hover {
 
 .titulo {
   padding: 2%;
-  border: 2px solid white;
-  border-bottom-right-radius: 2rem;
+  border: 2px solid var(--verde);
+  border-radius: 1rem 1rem 10rem 1rem;
 }
+
+/* .titulo-sinverde {
+  padding: 2%;
+  border: 2px solid black;
+  border-radius: 1rem 1rem 10rem 1rem;
+} */
 
 
 .titulo-animado {
@@ -155,4 +181,8 @@ p{
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+.colorhero{
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 }
