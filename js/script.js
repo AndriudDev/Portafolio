@@ -52,3 +52,34 @@ function revealOnScroll() {
 
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
+
+
+
+/* FLIP */
+document.querySelectorAll('.flip-card').forEach(card => {
+  const inner = card.querySelector('.flip-inner');
+  const front = card.querySelector('.front');
+  const back = card.querySelector('.back');
+
+  // Inicialmente ocultamos el back
+  back.style.display = 'none';
+
+  card.addEventListener('click', () => {
+    card.classList.toggle('flipped');
+
+    if (card.classList.contains('flipped')) {
+      // Mostrar back y ocultar front
+      back.style.display = 'block';
+      front.style.display = 'none';
+    } else {
+      // Volver a mostrar front y ocultar back
+      front.style.display = 'block';
+      back.style.display = 'none';
+    }
+  });
+});
+
+
+
+
+
