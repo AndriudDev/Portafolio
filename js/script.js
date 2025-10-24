@@ -80,6 +80,24 @@ document.querySelectorAll('.flip-card').forEach(card => {
 });
 
 
+/* LIGHTBOX */
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+// Evita que el click en una imagen dispare el flip
+document.querySelectorAll('.zoomable').forEach(img => {
+  img.addEventListener('click', e => {
+    e.stopPropagation(); // 🔹 Evita girar el card
+    lightboxImg.src = img.src;
+    lightbox.classList.add('show');
+  });
+});
+
+// Cierra el lightbox al hacer click en cualquier parte
+lightbox.addEventListener('click', () => {
+  lightbox.classList.remove('show');
+});
+
 
 
 
