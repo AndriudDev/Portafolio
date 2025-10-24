@@ -238,26 +238,41 @@ p {
 }
 
 
-/* 🔹 Cuadrícula de imágenes (3x2) */
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  margin-top: 10px;
-}
-
-/* 🔹 Estilo de cada imagen */
-.image-grid img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
 
 .image-grid img:hover {
   transform: scale(1.05);
 }
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.image-grid img {
+  flex: 1 1 150px; 
+  max-width: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* fondo de imagen */
+.card {
+  background-color: #1c1c1c; 
+}
+.card img{
+border-radius: 10px;
+}
+
+
+
+
+
+
+/* LIGHTBOX */
 
 
 .lightbox {
@@ -276,7 +291,8 @@ p {
   background: #111;
   padding: 2rem;
   border-radius: 1rem;
-  max-width: 60%;
+  max-width: 70%;
+  max-height: 70%;
   color: #fff;
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
 }
