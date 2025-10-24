@@ -16,20 +16,23 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  /* font-family: 'Inter', sans-serif; */
   font-family: 'Press Start 2P', monospace;
   scroll-behavior: smooth;
   /* background-color: black; */
   background-color: #282828;
+
 }
 
 .bg-dark {
   background-color: black !important;
 }
 
+.container {
+  max-width: 90%;
+}
 
-
-.navbar-brand:hover{
+.navbar-brand:hover {
   scale: 0.9;
   text-decoration: none;
 
@@ -37,7 +40,7 @@ body {
 
 /* HERO */
 .hero {
-  min-height: 60vh;
+  min-height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,9 +52,15 @@ body {
 }
 
 .hero h1 {
-  
+  padding-top: 2rem;
   color: #7fff58;
-  font-size: 3rem;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.hero h2 {
+
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -147,22 +156,24 @@ a:hover {
 }
 
 
-
 .titulo-animado {
   display: inline-block;
   animation: moverArribaAbajo 1.5s ease-in-out infinite;
 }
 
 @keyframes moverArribaAbajo {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
 }
 
-p{
+p {
   font-size: large;
 }
 
@@ -178,21 +189,19 @@ p{
   transform: translateY(0);
 }
 
-.colorhero{
+.colorhero {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 }
 
 
 .project-card {
-  background-color: #1c1c1c; /* o el color que prefieras */
+  background-color: #1c1c1c;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
   height: 100%;
-/*   display: flex;
-  flex-direction: column; */
   justify-content: stretch;
-  
+
 }
 
 
@@ -202,7 +211,7 @@ p{
   border-radius: 1rem 1rem 10rem 1rem;
   background-color: var(--verde);
 
-  height: 4.5rem; 
+  height: 4.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -218,7 +227,8 @@ p{
 
 .card-text {
   margin-bottom: 15px;
-  color: white; /* Color de texto secundario */
+  color: white;
+  /* Color de texto secundario */
 
 }
 
@@ -227,38 +237,11 @@ p{
   transition: transform 0.3s ease;
 }
 
-/* //!FLIP */
-.flip-card {
-  perspective: 1000px;
-  cursor: pointer;
-}
-
-.flip-inner {
-  transition: transform 0.8s ease;
-  transform-style: preserve-3d;
-  position: relative; /* para crecer con el contenido */
-}
-
-.front, .back {
-  backface-visibility: hidden;
-  position: relative; /* para que crezca con contenido */
-}
-
-.back {
-  display: none;
-  transform: rotateY(180deg);
-  color: white;
-}
-
-.flipped .flip-inner { 
-  transform: rotateY(180deg);
-}
-
 
 /* 🔹 Cuadrícula de imágenes (3x2) */
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   margin-top: 10px;
 }
@@ -269,7 +252,7 @@ p{
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
 }
 
 .image-grid img:hover {
@@ -277,7 +260,6 @@ p{
 }
 
 
-/* --- Lightbox fullscreen --- */
 .lightbox {
   display: none;
   position: fixed;
@@ -285,28 +267,44 @@ p{
   background: rgba(0, 0, 0, 0.95);
   justify-content: center;
   align-items: center;
-  z-index: 5000; /* encima de todo */
+  z-index: 5000;
+  padding: 20px;
+  overflow-y: auto;
 }
+
+.lightbox-content {
+  background: #111;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 60%;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+}
+
 .lightbox.show {
   display: flex;
-  animation: fadeIn 0.3s ease;
-}
-.lightbox img {
-  max-width: 95%;
-  max-height: 90%;
-  border-radius: 15px;
-  box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
-  cursor: zoom-out;
-  transition: transform 0.3s ease;
-}
-.lightbox img:hover {
-  transform: scale(1.02);
-}
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
+/* BOTON LIGHTBOX*/
+.lightbox-close {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  /* background: #f44336;  */
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-
-
+.lightbox-close:hover {
+  background: #d32f2f;
+}

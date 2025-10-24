@@ -7,14 +7,12 @@
   <title>Andrés Vergara - Portafolio</title>
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="css/style.css">
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-  
 
 </head>
 
@@ -23,16 +21,16 @@
   <!-- NAV -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Andrés Vergara</a>
+      <a class="navbar-brand fs-2 " href="#">Andrés Vergara</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#hero">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
-          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item fs-5"><a class="nav-link" href="#hero">Inicio</a></li>
+          <li class="nav-item fs-5"><a class="nav-link" href="#experiencia">Experiencia</a></li>
+          <li class="nav-item fs-5"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+          <li class="nav-item fs-5"><a class="nav-link" href="#contacto">Contacto</a></li>
         </ul>
       </div>
     </div>
@@ -42,7 +40,7 @@
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center text-center hero">
     <div class="container">
       <!-- <h1 class="mb-3 titulo-animado">Hola, soy Andrés Vergara</h1> -->
-      <h1 class="mb-3 titulo-animado">Hola, soy Andrés Vergara</h1>
+      <h1 class="mb-3 mt-5 titulo-animado">Hola, soy Andrés Vergara</h1>
       <h2 class="lead mb-4">Desarrollador web y aplicaciones</h2>
       <a href="#projects" class="btn btn-primary btn-lg mt-5">Mis proyectos</a>
       <div class="container mt-3">
@@ -56,12 +54,12 @@
 
   <!-- EXPERIENCIA -->
   <section id="experiencia" class="section py-5">
-    <div class="container text-center">
-      <h2 class="mb-4 titulo">Experiencia</h2>
+    <div class="container ">
+      <h2 class="mb-4 titulo text-center">Experiencia</h2>
 
-      <div class="container d-flex justify-content-between">
-        <h6 class="mb-4 me-3">Programador Independiente</h6>
-        <h6 class="mb-4">Julio 2023 - Actualidad</h6>
+      <div class=" d-flex justify-content-between">
+        <h6 class="mb-4 fs-5 ">Programador Independiente</h6>
+        <h6 class="mb-4 fs-5 ">Julio 2023 - Actualidad</h6>
       </div>
       <p>Desde mediados de 2023 me desempeño como programador independiente, enfocándome en crear soluciones digitales
         que combinan funcionalidad, diseño y experiencia de usuario. A través de mi trabajo en <a
@@ -78,6 +76,11 @@
     </div>
   </section>
 
+  <div id="lightbox" class="lightbox">
+    <div id="lightbox-content" class="lightbox-content"></div>
+    <button id="lightbox-close" class="lightbox-close">&times;</button>
+  </div>
+
   <!-- proyectos -->
   <section id="proyectos" class="section py-5 text-light reveal colorhero">
     <div class="container text-center">
@@ -85,95 +88,43 @@
       <div class="row g-2">
 
 
-        <div id="lightbox" class="lightbox">
-          <img id="lightbox-img" src="" alt="Imagen ampliada">
-        </div>
+
 
         <div class="col-md-4">
-          <div class="flip-card project-card">
-            <div class="flip-inner">
-              <div class="front">
-                <h5 class="card-title">App Palworld</h5>
-                <i class="fab fa-flutter"></i>
-                <p class="card-text">
-                  Este portafolio muestra proyectos y habilidades de manera profesional.
-                  Agrega todo el texto que quieras y la tarjet
-                </p>
-                <p>Click</p>
-              </div>
-              <div class="back">
-                <h5 class="card-title">Detalles</h5>
-                <p class="card-text">
-                  Creado con HTML, CSS y Bootstrap.a tar
-                </p>
+          <div class="project-card zoomable" data-title="Juego Pixel" data-body="
+      <p>Proyecto de videojuego con estilo retro inspirado en los 90s.</p>
+      <div class='image-grid  text-center'>
+      <img src='/img/pal/pal_1.png' alt='Imagen 1' class='zoomable'>
+      <img src='/img/pal/pal_2.png' alt='Imagen 2' class='zoomable'>
+      <img src='/img/pal/pal_3.png' alt='Imagen 3' class='zoomable'>
+      <img src='/img/pal/pal_4.png' alt='Imagen 4' class='zoomable'>
 
-                <!-- <div class="image-grid">
-                  <img src="/img/1.png" alt="Imagen 1">
-                  <img src="/img/2.png" alt="Imagen 2">
-                  <img src="/img/3.png" alt="Imagen 3">
-                  <img src="/img/4.png" alt="Imagen 4">
-                  <img src="/img/5.png" alt="Imagen 5">
-                  <img src="/img/6.png" alt="Imagen 6">
-                </div> -->
-
-                <div class="image-grid">
-                  <img src="/img/pal/pal_1.png" alt="Imagen 1" class="zoomable">
-                  <img src="/img/pal/pal_2.png" alt="Imagen 2" class="zoomable">
-                  <img src="/img/pal/pal_3.png" alt="Imagen 3" class="zoomable">
-                  <img src="/img/pal/pal_4.png" alt="Imagen 4" class="zoomable">
-<!--                   <img src="/img/5.png" alt="Imagen 5" class="zoomable">
-                  <img src="/img/6.png" alt="Imagen 6" class="zoomable"> -->
-                </div>
-
-                <!-- Lightbox -->
-
-
-              </div>
-            </div>
+    </div>">
+            <h5 class="card-title">Juego Pixel</h5>
+            <p class="card-text">Resumen del proyecto.</p>
           </div>
         </div>
 
-        <div class="col-md-4">
-          <div class="flip-card project-card">
-            <div class="flip-inner">
-              <div class="front">
-                <h5 class="card-title">Portafolio web moderno</h5>
-                <p class="card-text">
-                  Este portafolio muestra proyectos y habilidades de manera profesional.
-                  Agrega todo el texto que quieras y la tarjet
-                </p>
-              </div>
-              <div class="back">
-                <h5 class="card-title">Detalles</h5>
-                <p class="card-text">
-                  Creado con HTML, CSS y Bootstrap. La tarjeta se adapta al co tarjetras y la tar tarjetras y la tar
-                  tarjetras y la tar
-                  tarjetras y la tar tarjetras y la tar tarjetras y la tarntenido largo.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div class="col-md-4">
-          <div class="flip-card project-card">
-            <div class="flip-inner">
-              <div class="front">
-                <h5 class="card-title">Portafolio web moderno</h5>
-                <p class="card-text">
-                  Este portafolio muestra proyectos y habilidades de manera profesional.
-                  Agrega todo el texto que quieras y la tarjet
-                </p>
-              </div>
-              <div class="back">
-                <h5 class="card-title">Detalles</h5>
-                <p class="card-text">
-                  Creado con HTML, CSS y Bootstrap. La tarjeta se adapta al co tarjetras y la tar tarjetras y la tar
-                  tarjetras y la tar
-                  tarjetras y la tar tarjetras y la tar tarjetras y la tarntenido largo.
-                </p>
-              </div>
-            </div>
+          <div class="project-card zoomable" data-title="Juego alfacero" data-body="
+      <p>Proyecto de videojuego con estilo retro inspirado en los 90s.</p>
+      <div class='image-grid  text-center'>
+      <img src='/img/pal/pal_1.png' alt='Imagen 1' class='zoomable'>
+      <img src='/img/pal/pal_2.png' alt='Imagen 2' class='zoomable'>
+      <img src='/img/pal/pal_3.png' alt='Imagen 3' class='zoomable'>
+      <img src='/img/pal/pal_4.png' alt='Imagen 4' class='zoomable'>
+
+    </div>">
+            <h5 class="card-title">Juego Alfazero</h5>
+            <p class="card-text">toy desarrollando "Escaphel", un videojuego creado en Unity que combina exploración,
+        estrategia e inteligencia artificial. Este proyecto representa una fusión de mis intereses por la programación y
+        el diseño.
+        Esta etapa profesional ha sido clave para fortalecer mis habilidades té
+      toy desarrollando "Escaphel", un videojuego creado en Unity que combina exploración,
+        estrategia e inteligencia artificial. Este proyecto representa una fusión de mis intereses por la programación y
+        el diseño.
+        Esta etapa profesional ha sido clave para fortalecer mis habilidades té</p>
           </div>
         </div>
 
@@ -181,28 +132,14 @@
 
 
         <div class="col-md-4">
-          <div class="flip-card project-card">
-            <div class="flip-inner">
-              <div class="front">
-                <h5 class="card-title">Portafolio web moderno</h5>
-                <p class="card-text">
-                  Este portafolio muestra proyectos y habilidades de manera profesional.
-                  Agrega todo el texto que quieras y la tarjet
-                </p>
-              </div>
-              <div class="back">
-                <h5 class="card-title">Detalles</h5>
-                <p class="card-text">
-                  Creado con HTML, CSS y Bootstrap. La tarjeta se adapta al co tarjetras y la tar tarjetras y la tar
-                  tarjetras y la tar
-                  tarjetras y la tar tarjetras y la tar tarjetras y la tarntenido largo.
-                </p>
-              </div>
-            </div>
+          <div class="project-card zoomable" data-img="/img/pal/pal_1.png">
+            <h5 class="card-title">Juego 12312e12d 123 ds l</h5>
+            <p class="card-text">Restoy desarrollando "Escaphel", un videojuego creado en Unity que combina exploración,
+        estrategia e inteligencia artificial. Este proyecto representa una fusión de mis intereses por la programación y
+        el diseño.
+        Esta etapa profesional ha sido clave para fortalecer mis habilidades té.</p>
           </div>
         </div>
-
-
 
 
 

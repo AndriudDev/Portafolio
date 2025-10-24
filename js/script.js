@@ -55,49 +55,37 @@ window.addEventListener('load', revealOnScroll);
 
 
 
-/* FLIP */
-document.querySelectorAll('.flip-card').forEach(card => {
-  const inner = card.querySelector('.flip-inner');
-  const front = card.querySelector('.front');
-  const back = card.querySelector('.back');
+/* //! LIGHTING */
 
-  // Inicialmente ocultamos el back
-  back.style.display = 'none';
+document.addEventListener('DOMContentLoaded', () => {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxContent = document.getElementById('lightbox-content');
+  const lightboxClose = document.getElementById('lightbox-close');
 
-  card.addEventListener('click', () => {
-    card.classList.toggle('flipped');
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const html = card.getAttribute('data-body');
+      lightboxContent.innerHTML = html || '<p>Sin contenido.</p>';
+      lightbox.classList.add('show');
+    });
+  });
 
-    if (card.classList.contains('flipped')) {
-      // Mostrar back y ocultar front
-      back.style.display = 'block';
-      front.style.display = 'none';
-    } else {
-      // Volver a mostrar front y ocultar back
-      front.style.display = 'block';
-      back.style.display = 'none';
+  // Cerrar al hacer clic fuera del contenido
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove('show');
+      lightboxContent.innerHTML = '';
     }
   });
-});
 
-
-/* LIGHTBOX */
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-
-// Evita que el click en una imagen dispare el flip
-document.querySelectorAll('.zoomable').forEach(img => {
-  img.addEventListener('click', e => {
-    e.stopPropagation(); // 🔹 Evita girar el card
-    lightboxImg.src = img.src;
-    lightbox.classList.add('show');
+  lightboxClose.addEventListener('click', (e) => {
+    
+      lightbox.classList.remove('show');
+      lightboxContent.innerHTML = '';
+    
   });
+
+
 });
-
-// Cierra el lightbox al hacer click en cualquier parte
-lightbox.addEventListener('click', () => {
-  lightbox.classList.remove('show');
-});
-
-
 
 
