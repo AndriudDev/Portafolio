@@ -223,10 +223,6 @@ p {
   color: black;
 }
 
-/* .project-card .card-text {
-  flex-grow: 1;
-  
-} */
 
 .card-text {
   margin-bottom: 15px;
@@ -263,12 +259,14 @@ p {
 }
 
 /* fondo de imagen */
-.card {
+ .card {
   background-color: #1c1c1c; 
+  border: none;
 }
-.card img{
-border-radius: 10px;
-}
+
+/* .card img{
+border-radius: 10px solid while;
+} */
 
 
 
@@ -327,3 +325,22 @@ border-radius: 10px;
 .lightbox-close:hover {
   background: #d32f2f;
 }
+
+
+/* lupa de card */
+
+.project-card::after {
+  content: "🔍";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-500%, -50%) scale(0);
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(2);
+}
+
